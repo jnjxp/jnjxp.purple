@@ -1,6 +1,11 @@
 # jnjxp.purple
 execute tasks on collections
 
+[![Latest version][ico-version]][link-packagist]
+[![Build Status][ico-travis]][link-travis]
+[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
+[![Quality Score][ico-code-quality]][link-code-quality]
+
 ```php
 <?php
 
@@ -82,3 +87,14 @@ $runner(); // Execute tasks
  */
 
 ```
+
+
+[ico-version]: https://img.shields.io/packagist/v/jnjxp/purple.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/jnjxp/jnjxp.purple/develop.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/jnjxp/jnjxp.purple.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/jnjxp/jnjxp.purple.svg?style=flat-square
+
+[link-packagist]: https://packagist.org/packages/jnjxp/purple
+[link-travis]: https://travis-ci.org/jnjxp/jnjxp.purple
+[link-scrutinizer]: https://scrutinizer-ci.com/g/jnjxp/jnjxp.purple
+[link-code-quality]: https://scrutinizer-ci.com/g/jnjxp/jnjxp.purple
