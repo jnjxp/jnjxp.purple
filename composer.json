@@ -1,0 +1,23 @@
+{
+    "name": "jnjxp/purple",
+    "description": "Iterate tasks on items and collections",
+    "homepage":"https://github.com/jnjxp/jnjxp.purple",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jake johns",
+            "email": "jake@jakejohns.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Jnjxp\\Purple\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jnjxp\\Purple\\":"tests/"
+        }
+    }
+}
