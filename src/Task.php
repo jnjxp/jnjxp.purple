@@ -100,7 +100,7 @@ class Task implements TaskInterface
      * @param mixed $task     task
      * @param int   $priority order priority
      *
-     * @return mixed
+     * @return $this
      *
      * @access public
      */
