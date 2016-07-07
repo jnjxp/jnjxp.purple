@@ -65,8 +65,6 @@ class Runner implements Countable
      * @param callable       $resolver DESCRIPTION
      * @param QueueInterface $queue    DESCRIPTION
      *
-     * @return mixed
-     *
      * @access public
      */
     public function __construct(

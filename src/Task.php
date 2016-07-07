@@ -66,8 +66,6 @@ class Task implements TaskInterface
      * @param QueueInterface $itemTaskQueue       DESCRIPTION
      * @param QueueInterface $collectionTaskQueue DESCRIPTION
      *
-     * @return mixed
-     *
      * @access public
      */
     public function __construct(
@@ -127,7 +125,7 @@ class Task implements TaskInterface
     /**
      * Get item tasks
      *
-     * @return array
+     * @return QueueInterface
      *
      * @access public
      */
@@ -139,7 +137,7 @@ class Task implements TaskInterface
     /**
      * Get collection tasks
      *
-     * @return array
+     * @return QueueInterface
      *
      * @access public
      */
