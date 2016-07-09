@@ -188,7 +188,7 @@ class Runner implements Countable
         foreach ($tasks as $spec) {
             $task = $this->resolve($spec);
             foreach ($items as $key => $value) {
-                $task($value, $key);
+                $task($value, $key, $items);
             }
         }
     }

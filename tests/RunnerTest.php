@@ -15,11 +15,13 @@ class RunnerTest extends \PHPUnit_Framework_TestCase
         $test = $this;
 
         $this->input = [1,2,3,4];
+        $input = $this->input;
 
-        $this->each = function ($value, $key) use ($test) {
+        $this->each = function ($value, $key, $context) use ($test, $input) {
             static $idx = 0;
             $test->assertEquals($value, $idx + 1);
             $test->assertEquals($key, $idx);
+            $this->assertEquals($context, $input);
             $idx++;
         };
 
