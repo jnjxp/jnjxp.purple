@@ -95,6 +95,40 @@ class Task implements TaskInterface
     }
 
     /**
+     * Add Item Tasks
+     *
+     * @param mixed $tasks    tasks to add
+     * @param int   $priority task priority
+     *
+     * @return $this
+     *
+     * @access public
+     */
+    public function addItemTasks($tasks, $priority = 1000)
+    {
+        foreach ($tasks as $task) {
+            $this->each($task, $priority);
+        }
+        return $this;
+    }
+
+    /**
+     * Set Item Tasks
+     *
+     * @param mixed $tasks    Tasks to set
+     * @param int   $priority Task priority
+     *
+     * @return $this
+     *
+     * @access public
+     */
+    public function setItemTasks($tasks, $priority = 1000)
+    {
+        $this->itemTasks->clear();
+        return $this->addItemTasks($tasks, $priority);
+    }
+
+    /**
      * Add a collection task
      *
      * @param mixed $task     task
@@ -108,6 +142,40 @@ class Task implements TaskInterface
     {
         $this->collectionTasks->insert($task, $priority);
         return $this;
+    }
+
+    /**
+     * Add Collection Tasks
+     *
+     * @param mixed $tasks    tasks to add
+     * @param int   $priority task priority
+     *
+     * @return $this
+     *
+     * @access public
+     */
+    public function addCollectionTasks($tasks, $priority = 1000)
+    {
+        foreach ($tasks as $task) {
+            $this->all($task, $priority);
+        }
+        return $this;
+    }
+
+    /**
+     * Set Collection Tasks
+     *
+     * @param mixed $tasks    tasks to set
+     * @param int   $priority priority of tasks
+     *
+     * @return $this
+     *
+     * @access public
+     */
+    public function setCollectionTasks($tasks, $priority = 1000)
+    {
+        $this->collectionTasks->clear();
+        return $this->addCollectionTasks($tasks, $priority);
     }
 
     /**

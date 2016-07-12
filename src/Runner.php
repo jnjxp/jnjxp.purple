@@ -108,6 +108,40 @@ class Runner implements Countable
     }
 
     /**
+     * Add Tasks
+     *
+     * @param mixed $tasks    tasks to add
+     * @param int   $priority priority of tasks
+     *
+     * @return $this
+     *
+     * @access public
+     */
+    public function addTasks($tasks, $priority = 1000)
+    {
+        foreach ($tasks as $task) {
+            $this->addTask($task, $priority);
+        }
+        return $this;
+    }
+
+    /**
+     * Set Tasks
+     *
+     * @param mixed $tasks    Tasks to set
+     * @param int   $priority tasks priority
+     *
+     * @return $this
+     *
+     * @access public
+     */
+    public function setTasks($tasks, $priority = 1000)
+    {
+        $this->tasks->clear();
+        return $this->addTasks($tasks, $priority);
+    }
+
+    /**
      * Task
      *
      * @param mixed $collection collection or collection spec

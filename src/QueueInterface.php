@@ -44,4 +44,13 @@ interface QueueInterface extends Countable, Traversable
      * @access public
      */
     public function insert($value, $priority);
+
+    /**
+     * Clear all queued tasks
+     *
+     * @return void
+     *
+     * @access public
+     */
+    public function clear();
 }

@@ -45,6 +45,35 @@ class RunnerTest extends \PHPUnit_Framework_TestCase
         $runner();
     }
 
+    public function testSetters()
+    {
+        $runner = new Runner;
+        $this->assertEquals(0, count($runner));
+
+        $runner->addTasks(['foo', 'bar']);
+        $this->assertEquals(2, count($runner));
+
+        $runner->setTasks(['foo']);
+        $this->assertEquals(1, count($runner));
+    }
+
+    public function testTaskSetters()
+    {
+        $task = new Task($this->input);
+        $task->addItemTasks(['foo', 'bar']);
+        $this->assertEquals(2, count($task->getItemTasks()));
+
+        $task->setItemTasks(['abc']);
+        $this->assertEquals(1, count($task->getItemTasks()));
+
+        // Collection
+        $task->addCollectionTasks(['foo', 'bar']);
+        $this->assertEquals(2, count($task->getCollectionTasks()));
+
+        $task->setCollectionTasks(['abc']);
+        $this->assertEquals(1, count($task->getCollectionTasks()));
+    }
+
     public function testResolution()
     {
         $resolver = [$this, 'resolver'];

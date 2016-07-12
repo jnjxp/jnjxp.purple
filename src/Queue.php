@@ -89,4 +89,18 @@ class Queue implements IteratorAggregate, QueueInterface
     {
         return clone $this->queue;
     }
+
+    /**
+     * Clear
+     *
+     * @return void
+     *
+     * @access public
+     */
+    public function clear()
+    {
+        while (!$this->queue->isEmpty()) {
+            $this->queue->next();
+        }
+    }
 }
